@@ -1,0 +1,21 @@
+#container{
+    text-align: center;
+    background-color: teal;
+    color: white;
+    padding: 15px;
+}
+body{
+    font-family: Arial;
+}
+form{
+    padding: 10px;
+    margin: auto;
+}
+button{
+    color: teal;
+    background-color: white;
+    padding: 5px;
+    border: 2px solid teal;
+    margin: auto;
+    display: block;
+}
