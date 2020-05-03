@@ -11,3 +11,13 @@ function primeNum(){
         //document.getElementById("msg").innerHTML = "";
     }
 }
+function isPrime(num){
+    var res = true;
+    for (var i=2; i<=Math.ceil(num/2); i++){
+        if((num%i)==0){
+            res = false;
+            break;
+        }
+    }
+    return res;
+}
