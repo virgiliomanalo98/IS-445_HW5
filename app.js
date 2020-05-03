@@ -1,13 +1,13 @@
 function primeNum(){
-    var num1 = parseInt(document.getElementById("num1").value);
-    var num2 = parseInt(document.getElementById("num2").value);
+    var firstNum = parseInt(document.getElementById("num1").value);
+    var secondNum = parseInt(document.getElementById("num2").value);
 
     // check if the numbers fit criteria
-    if (num1 <= 2 || num1 >= 100 || num2 <= 2 || num2 >= 100){
+    if (firstNum <= 2 || firstNum >= 100 || secondNum <= 2 || secondNum >= 100){
         document.getElementById("msg").innerHTML = "Invalid input, please try again.";
     }
-    else if (num1 >= 2 && num1 <= 100 && num2 >= 2 && num2 <= 100){
-        calculatePrimeNum(num1,num2);
+    else if (firstNum >= 2 && firstNum <= 100 && secondNum >= 2 && secondNum <= 100){
+        calculatePrimeNum(firstNum,secondNum);
         //document.getElementById("msg").innerHTML = "";
     }
 }
@@ -21,20 +21,20 @@ function isPrime(num){
     }
     return res;
 }
-function calculatePrimeNum(firstNum,secondNum){
+function calculatePrimeNum(numOne,numTwo){
     //alert("calculating");
     var pNumArray = [];
     var sNum = 0;
     var bNum = 0;
 
 
-    if (firstNum > secondNum){
-        sNum = secondNum;
-        bNum = firstNum;
+    if (numOne > numTwo){
+        sNum = numTwo;
+        bNum = numOne;
     }
-    else if (firstNum < secondNum){
-        sNum = firstNum;
-        bNum = secondNum;
+    else if (numOne < numTwo){
+        sNum = numOne;
+        bNum = numTwo;
     }
 
     console.log(sNum);
