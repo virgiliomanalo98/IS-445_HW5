@@ -21,3 +21,40 @@ function isPrime(num){
     }
     return res;
 }
+function calculatePrimeNum(firstNum,secondNum){
+    //alert("calculating");
+    var pNumArray = [];
+    var sNum = 0;
+    var bNum = 0;
+
+
+    if (firstNum > secondNum){
+        sNum = secondNum;
+        bNum = firstNum;
+    }
+    else if (firstNum < secondNum){
+        sNum = firstNum;
+        bNum = secondNum;
+    }
+
+    console.log(sNum);
+    console.log(bNum);
+
+    while(sNum <= bNum){
+        console.log("in while");
+
+        console.log(isPrime(3));
+        if(isPrime(sNum) == true){
+            console.log(sNum);
+            pNumArray.push(sNum);
+            sNum = sNum + 1;
+        }
+        else if (isPrime(sNum) == false){
+            console.log(sNum);
+            sNum = sNum + 1;
+        }
+    }
+    console.log(pNumArray);
+    document.getElementById("primeNumber").innerHTML = "There are " + pNumArray.length +" prime numbers.";
+    document.getElementById("msg").innerHTML = pNumArray;
+}
